@@ -19,3 +19,25 @@ link.addEventListener('click' , function() {
     stchiw();
     }
 });
+
+let elt = document.getElementById("bt");
+elt.addEventListener('mousemove', function(event) {
+    const x = event.offsetX; // Coordonnée X de la souris dans l'élément
+    const y = event.offsetY; // Coordonnée Y de la souris dans l'élément
+    console.log("("+x+";"+y+")");
+});
+
+
+fetch('https://mockbin.com/request')
+  .then(function(res) {
+    if (res.ok) {
+      return res.json();
+    }
+  })
+  .then(function(value) {
+    console.log(value);
+  })
+  .catch(function(err) {
+    // Une erreur est survenue
+  });
+  
